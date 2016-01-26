@@ -27,8 +27,8 @@ public class EndPointCupom {
 	}
 
 	@GET
-	@Path("{id}")
-	public Response listarTodos (@PathParam("id")Long id) {
+	@Path("{identificacao} \\d+")
+	public Response listarPorIdCompleto (@PathParam("id")Long id) {
 		return Response.ok(cupomDAO.buscarPorIdCompleto(id)).build();
 	}
 
