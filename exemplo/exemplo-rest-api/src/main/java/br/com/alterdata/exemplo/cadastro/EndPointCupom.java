@@ -43,8 +43,8 @@ public class EndPointCupom {
 	}
 
 	@DELETE
-	@Path("{id}")
-	public Response excluir (@PathParam("id")Long id) {
+	@Path("{identificacao} \\d+")
+	public Response excluir (@PathParam("identificacao")Long id) {
 		cupomDAO.excluir(id);
 
 		return Response.ok().build();
